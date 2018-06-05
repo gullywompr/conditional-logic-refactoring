@@ -3,6 +3,7 @@ This exercise deals with refactoring a class to isolate conditional behavior.
 
 
 The current Employee class (shown below) is used for all employees.  Some employees are managers, as determined by the `isManager` method.  A new requirement is to allow some employees to be part-time.
+
 ![Employee Class](images/2018/06/employee.png)
 
 The obvious quick-and-dirty (and naïve) implementation would be to follow the example for managers and simply add a boolean flag and getter method for part-time employees to the Employee class.  However, this increases the coupling of different behavior to the Employee class.  What's more, the behaviors are probably related to different parts of the company organization - while job titles (like manager) are typically the concern of HR, whether an employee is part or full-time is likely more of a concern to payroll.  These separate parts of the company organization will certainly have different requirements at different times.  Too much coupling of behavior to too few classes can make for a brittle design that is hard to change.
