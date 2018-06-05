@@ -1,8 +1,8 @@
 package com.olsoncb.exercises.conditionallogicrefactoring.refactoredEntity;
 
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class EmployeeTest {
@@ -14,9 +14,9 @@ public class EmployeeTest {
 
     Employee fullTimeStaffMember = Employee.staff(Employee.fullTime(employee));
 
-    assertThat(fullTimeStaffMember.isManager(), Matchers.is(false));
+    assertThat(fullTimeStaffMember.isManager(), is(false));
 
-    assertThat(fullTimeStaffMember.isPartTime(), Matchers.is(false));
+    assertThat(fullTimeStaffMember.isPartTime(), is(false));
   }
 
   @Test
@@ -24,9 +24,9 @@ public class EmployeeTest {
 
     Employee fullTimeManager = Employee.manager(Employee.fullTime(employee));
 
-    assertThat(fullTimeManager.isManager(), Matchers.is(true));
+    assertThat(fullTimeManager.isManager(), is(true));
 
-    assertThat(fullTimeManager.isPartTime(), Matchers.is(false));
+    assertThat(fullTimeManager.isPartTime(), is(false));
   }
 
   @Test
@@ -34,9 +34,9 @@ public class EmployeeTest {
 
     Employee partTimeStaffMember = Employee.staff(Employee.partTime(employee));
 
-    assertThat(partTimeStaffMember.isManager(), Matchers.is(false));
+    assertThat(partTimeStaffMember.isManager(), is(false));
 
-    assertThat(partTimeStaffMember.isPartTime(), Matchers.is(true));
+    assertThat(partTimeStaffMember.isPartTime(), is(true));
   }
 
   @Test
@@ -44,8 +44,8 @@ public class EmployeeTest {
 
     Employee partTimeManager = Employee.manager(Employee.partTime(employee));
 
-    assertThat(partTimeManager.isManager(), Matchers.is(true));
+    assertThat(partTimeManager.isManager(), is(true));
 
-    assertThat(partTimeManager.isPartTime(), Matchers.is(true));
+    assertThat(partTimeManager.isPartTime(), is(true));
   }
 }
