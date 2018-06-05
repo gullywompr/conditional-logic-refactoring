@@ -36,12 +36,12 @@ public interface Employee {
   }
 
   /**
-   * Full time employee employee.
+   * Full time employee.
    *
    * @param employee the employee
    * @return the employee
    */
-  static Employee fullTimeEmployee(Employee employee) {
+  static Employee fullTime(Employee employee) {
     return new FullTimeEmployee() {
       @Override
       public Boolean isManager() {
@@ -51,12 +51,12 @@ public interface Employee {
   }
 
   /**
-   * Part time employee employee.
+   * Part time employee.
    *
    * @param employee the employee
    * @return the employee
    */
-  static Employee partTimeEmployee(Employee employee) {
+  static Employee partTime(Employee employee) {
     return new PartTimeEmployee() {
       @Override
       public Boolean isManager() {

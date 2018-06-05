@@ -12,7 +12,7 @@ public class EmployeeTest {
   @Test
   public void full_time_staff() {
 
-    Employee fullTimeStaffMember = Employee.staff(Employee.fullTimeEmployee(employee));
+    Employee fullTimeStaffMember = Employee.staff(Employee.fullTime(employee));
 
     assertThat(fullTimeStaffMember.isManager(), Matchers.is(false));
 
@@ -22,7 +22,7 @@ public class EmployeeTest {
   @Test
   public void full_time_manager() {
 
-    Employee fullTimeManager = Employee.manager(Employee.fullTimeEmployee(employee));
+    Employee fullTimeManager = Employee.manager(Employee.fullTime(employee));
 
     assertThat(fullTimeManager.isManager(), Matchers.is(true));
 
@@ -32,7 +32,7 @@ public class EmployeeTest {
   @Test
   public void part_time_staff() {
 
-    Employee partTimeStaffMember = Employee.staff(Employee.partTimeEmployee(employee));
+    Employee partTimeStaffMember = Employee.staff(Employee.partTime(employee));
 
     assertThat(partTimeStaffMember.isManager(), Matchers.is(false));
 
@@ -42,7 +42,7 @@ public class EmployeeTest {
   @Test
   public void part_time_manager() {
 
-    Employee partTimeManager = Employee.manager(Employee.partTimeEmployee(employee));
+    Employee partTimeManager = Employee.manager(Employee.partTime(employee));
 
     assertThat(partTimeManager.isManager(), Matchers.is(true));
 
