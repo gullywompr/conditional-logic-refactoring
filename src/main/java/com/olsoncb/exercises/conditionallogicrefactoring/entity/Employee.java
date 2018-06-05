@@ -2,26 +2,47 @@ package com.olsoncb.exercises.conditionallogicrefactoring.entity;
 
 import java.util.Date;
 
-public class Employee {
+/** The type Employee. */
+class Employee {
 
-    private boolean managerFlag;
-    private String name;
-    private Date dateHired;
-    private int id;
+  private boolean managerFlag;
+  private String name;
+  private Date dateHired;
+  private int id;
 
-    public String getName() {
-        return name;
-    }
+  /**
+   * Gets name.
+   *
+   * @return the name
+   */
+  public String getName() {
+    return name;
+  }
 
-    public String getId() {
-        return String.valueOf(id);
-    }
+  /**
+   * Gets id.
+   *
+   * @return the id
+   */
+  public String getId() {
+    return String.valueOf(id);
+  }
 
-    public Date getDateHired() {
-        return dateHired;
-    }
+  /**
+   * Gets date hired.
+   *
+   * @return the date hired
+   */
+  public Date getDateHired() {
+    return dateHired;
+  }
 
-    public boolean isManager() {
-        return managerFlag;
-    }
+  /**
+   * Is manager boolean.
+   *
+   * @return the boolean
+   */
+  public boolean isManager() {
+    return managerFlag;
+  }
 }
